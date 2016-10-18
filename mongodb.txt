@@ -1,0 +1,14 @@
+mongo CLACITranscription -u transcriptionUser -p
+CLTrans0ptACI
+#db.getCollectionNames()
+database = db['meetingMinuteWords']
+#database.find({'numPage':{'$gt':11},'height':{'$gt':100},'width':{'$gt':100}}).count()
+var myCursor = database.find({'numPage':{'$gt':20},'height':{'$gt':100,'$lt':200},'width':{'$gt':500,'$lt':700}}).limit(100)
+i=0
+while (i<100) {
+   var document = myCursor[i]
+   print(document['anonymizedImageFile'])
+   i += 1
+}
+
+#var a = database.find({'numPage':{'$gt':20},'height':{'$gt':100,'$lt':200},'width':{'$gt':500,'$lt':700}}).limit(100).toArray()
