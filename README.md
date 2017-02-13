@@ -1,13 +1,13 @@
 # CSH_new
-There are totally 5 py files:
+## There should be totally 5 py files:
 1. dbConfig.py
 2. extractId.py
 3. copyImage.py
 4. getTrans.py
 5. storeIntoDB.py (by Jiang)
 
-1. dbConfig.py is the MongoDB  database settings
-2. extractId.py is to extract image id from MongoDB and to output a csv file with ids
+####1. dbConfig.py is the MongoDB  database settings
+####2. extractId.py is to extract image id from MongoDB and to output a csv file with ids
 Usage:
 python extractId.py csvFile -l limit -pn pageMin -pm pageMax -hn heightMin -hm heightMax -wn widthMin -wm widthMax
 
@@ -26,7 +26,7 @@ Note, limit = 0 means select all images that satisfy criteria.
 maxNumPage,maxHeight, minHeight are from the function find_max, 
 which can retrive the max value in MongoDB
 
-3. copyImage.py is to copy images from soucePath folder to destPath folder according to image ids in a csv file
+####3. copyImage.py is to copy images from soucePath folder to destPath folder according to image ids in a csv file
 Usage:
 python copyImage.py infile -s sourcePath -d destPath
 
